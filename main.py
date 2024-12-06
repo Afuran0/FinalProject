@@ -34,6 +34,32 @@ class eBookReader:
         else:
             print(f"{book._title} is already in the system.")
 
+
+     # Update book method (Amedeo)
+    def updateBook(self, title, newTitle=None, newAuthor=None, newPages=None, newGenre=None):
+        for book in self._availableBooks:
+            if book._title == title:
+                if newTitle:
+                    book._title = newTitle
+                if newAuthor:
+                    book._author = newAuthor
+                if newPages:
+                    book._pages = newPages
+                if newGenre:
+                    book._genre = newGenre
+                print(f"{title} has been updated.")
+                return
+        print(f"{title} not found in available books.")
+
+    # Delete book method (Amedeo)
+    def deleteBook(self, title):
+        for book in self._availableBooks:
+            if book._title == title:
+                self._availableBooks.remove(book)
+                print(f"{title} has been removed from the system.")
+                return
+        print(f"{title} not found in available books.")
+
     # buying a book if not purchased, available, and exists
     def buyBook(self, bookName):
         for book in self._availableBooks:
