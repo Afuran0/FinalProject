@@ -250,6 +250,10 @@ def main():
     userOne.addBook(Book("Little Women", "Louisa May Alcott", "449", "Novel"))
     userOne.addBook(Book("The Phantom of the Opera", "Gaston Leroux", "360", "Novel"))
     userOne.addBook(Book("Snow Crash", "Neil Stephenson", "559", "Fiction"))
+     # EX for Updating a book (Amedeo)
+    userOne.updateBook("Mansfield Park", newTitle="Northanger Abbey", newAuthor="Jane Austen")
+    # EX for Deleting a book (Amedeo)
+    userOne.deleteBook("The Jungle Book")
 
     # simulating user purchases
     for i in range(6):
